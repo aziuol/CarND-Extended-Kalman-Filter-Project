@@ -22,7 +22,7 @@ string hasData(string s) {
   auto b2 = s.find_first_of("]");
   if (found_null != string::npos) {
     return "";
-  }
+  } 
   else if (b1 != string::npos && b2 != string::npos) {
     return s.substr(b1, b2 - b1 + 1);
   }
@@ -109,7 +109,7 @@ int main() {
           
           // Call ProcessMeasurement(meas_package) for Kalman filter
           fusionEKF.ProcessMeasurement(meas_package);       
-
+          std::cout << "fusionEKF complete" << std::endl;
           // Push the current estimated x,y positon from the Kalman filter's 
           //   state vector
 
